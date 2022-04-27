@@ -5,8 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafíos Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="counter">
+        <h1> {{ welcomeMessage }}</h1>
+        <div class="container">
+            <p> Elegí de a cuánto querés contar
+                <input type="number" v-model="quantity">
+            </p>
+            <p> Elegí un número y empezá a contar 
+                <input type="number" v-model="number">
+            </p>
+            <div class="buttons-container">
+                <button @click="decrease">Restá</button>
+                <button @click="increase">Sumá</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
